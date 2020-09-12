@@ -13,7 +13,7 @@ app.prepare().then(_=> {
     
     server.use( (req, res) => {
         if (req.secure || dev) { handle(req, res, parse(req.url, true)) }
-        else return res.redirect('https://www.mocknexus.com');
+        else return res.redirect('https://www.truepress.online');
     });
 
     server.listen(port, _=> console.log('Listening on port', port))
