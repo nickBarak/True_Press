@@ -1,0 +1,5 @@
+node_modules
+.env
+.next
+/styles/index.css.map
+.vscode
