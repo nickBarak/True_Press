@@ -1,0 +1,30 @@
+{
+  "name": "true_press",
+  "version": "1.0.0",
+  "description": "newspaper site",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "next",
+    "build": "next build && next export",
+    "export": "next export"
+  },
+  "keywords": [],
+  "author": "Nick Barak",
+  "license": "ISC",
+  "dependencies": {
+    "-": "0.0.1",
+    "express": "^4.17.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^9.5.3",
+    "nodemailer": "^6.4.11",
+    "pg": "^8.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-waypoint": "^9.0.3",
+    "uuidv4": "^6.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
