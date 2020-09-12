@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "next",
-    "build": "next build && next export",
+    "build": "next build",
     "export": "next export"
   },
   "keywords": [],
