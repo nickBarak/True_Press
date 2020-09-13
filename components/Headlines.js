@@ -16,7 +16,7 @@ function Headlines({ articles }) {
 								style={{ border: '5px solid #828282', marginBottom: '2px' }}
 								src={!faultyPicsumIDs.includes(articles[0].id % 1000)
 									? `https://picsum.photos/id/${articles[0].id % 1000}/450/300`
-									: `/img/nexus-logo.png`
+									: `/img/true-press-logo-1.png`
 								}
 								alt="headline"
 							/>
@@ -91,7 +91,7 @@ function Headlines({ articles }) {
 							<img
 								src={!faultyPicsumIDs.includes(articles[0].id % 1000)
 									? `https://picsum.photos/id/${articles[0].id % 1000}/200`
-									: `/img/nexus-logo.png`
+									: `/img/true-press-logo-1.png`
 								}
 								alt="headline"
 								style={{ width: '99%', marginBottom: '.5rem', border: '4px solid #828282' }}

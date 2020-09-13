@@ -2,36 +2,14 @@ import Headlines from '../components/Headlines';
 import CategoryPreview from '../components/CategoryPreview';
 import { queryDB } from '../db';
 import Layout from '../layouts';
-import Link from 'next/link';
-import { useEffect } from 'react';
-import { isUuid, uuid } from 'uuidv4';
-import lipsum from '../data/lipsum';
+import { uuid } from 'uuidv4';
 
 function App({ categories, headlines }) {
-	useEffect(_ => {
-		if (!sessionStorage.getItem('noticeSeen')) {
-			alert(
-				'NOTICE:\n\nThis site is an imitation of that of the university newspaper at the University of California, Santa Barbara - the Daily Nexus - and exists solely to demonstrate the abilities of the creator with regard to software development. Please support the Daily Nexus and the creators of the original site by visiting www.dailynexus.com.'
-			);
-			sessionStorage.setItem('noticeSeen', true);
-		}
-	}, []);
 
 	return (
 		<>
 			<Layout>
 				<div className="home">
-					{/* <Link href="/articles/1843">
-						<a className="banner">
-							<span>
-								LIVE: {lipsum.slice(58, 58 + `Updates on Coronavirus in Santa Barbara
-								County, on UCSB Operations`.length)}
-							</span>
-							<span className="banner-read-more">
-								click to read more
-							</span>
-						</a>
-					</Link> */}
 					<Headlines articles={headlines} />
 					<div className="home-by-category"
 						style={{

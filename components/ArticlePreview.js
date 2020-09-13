@@ -13,10 +13,10 @@ function ArticlePreview({ article, imageLeft, labyrinth }) {
 						<picture>
 							<source srcSet={!faultyPicsumIDs.includes(article.id % 1000)
 									? `https://picsum.photos/id/${article.id % 1000}/200`
-									: `/img/nexus-logo.png`
+									: `/img/true-press-logo-1.png`
 								} />
 							<source
-								srcSet="/img/nexus-logo.png"
+								srcSet="/img/true-press-logo-1.png"
 								type="image/png"
 							/>
 							<Link href={`/articles/${article.id}`}>
@@ -56,10 +56,10 @@ function ArticlePreview({ article, imageLeft, labyrinth }) {
 						<picture>
 							<source srcSet={!faultyPicsumIDs.includes(article.id % 1000)
 									? `https://picsum.photos/id/${article.id % 1000}/200`
-									: `/img/nexus-logo.png`
+									: `/img/true-press-logo-1.png`
 								} />
 							<source
-								srcSet="/img/nexus-logo.png"
+								srcSet="/img/true-press-logo-1.png"
 								type="image/png"
 							/>
 							<Link href={`/articles/${article.id}`}>
@@ -75,10 +75,10 @@ function ArticlePreview({ article, imageLeft, labyrinth }) {
 					<picture>
 						<source srcSet={!faultyPicsumIDs.includes(article.id % 1000)
 										? `https://picsum.photos/id/${article.id % 1000}/200`
-										: `/img/nexus-logo.png`
+										: `/img/true-press-logo-1.png`
 									} />
 						<source
-							srcSet="/img/nexus-logo.png"
+							srcSet="/img/true-press-logo-1.png"
 							type="image/png"
 						/>
 						<Link href={`/articles/${article.id}`}>

@@ -16,7 +16,6 @@ function Header() {
 							TRUE{' '}
 							<img
 								className="logo"
-								// src="/img/nexus-logo.png"
 								src="/img/true-press-logo-1.png"
 								alt="logo"
 							/>{' '}
