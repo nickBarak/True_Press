@@ -1,5 +1,4 @@
 import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
 import { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 
@@ -54,9 +53,6 @@ function Layout({ footerData, children }) {
 						display: 'flex',
 						justifyContent: 'space-between',
 					}}>
-					<div className="sidebar-container">
-						<Sidebar />
-					</div>
 					<div className="main-children">{children}</div>
 				</div>
 				{/* Bottom ad hidden if overlapping the footer */}

@@ -5,7 +5,7 @@ import { convertToPath, convertFromPath } from '../../../../Functions';
 
 export async function getStaticPaths() {
 	let categories = await queryDB(
-			"SELECT title, articles FROM categories WHERE title <> 'Labyrinth' AND title <> 'Headlines'"
+			"SELECT title, articles FROM categories WHERE title <> 'Headlines'"
 		),
 		/* Generates path for as many pages as needed (10 articles per page) */
 		paths = categories.map(({ title, articles }) =>

@@ -291,7 +291,7 @@ a {
 }
 
 .article {
-  margin: 0.15rem 1rem;
+  padding: .35rem 1rem;
 }
 
 .nav-link-mobile {
@@ -479,8 +479,7 @@ a {
   .headlines {
     display: none;
   }
-  .headlines-mobile,
-  .category-preview li:nth-child(1) .category-preview-details {
+  .headlines-mobile {
     display: block;
   }
   .home-category-previews {
@@ -549,6 +548,13 @@ a {
     margin-top: .5rem;
     margin-bottom: .5rem;
   }
+  .category-preview-details .picture-container {
+    border: 4px solid #828282;
+  }
+  .category-preview-details img {
+    border: none;
+    margin: 0;
+  }
   .main-comment-input-large-img {
     top: .6rem !important;
   }
@@ -560,7 +566,8 @@ a {
   }
   .sidebar-container,
   .header,
-  .category-preview-details {
+  .category-preview ul li:nth-child(2) .category-preview-details,
+  .category-preview ul li:nth-child(3) .category-preview-details {
     display: none;
   }
   .main-children {
@@ -590,6 +597,9 @@ a {
   }
   .banner-read-more {
     font-size: 1rem;
+  }
+  .article {
+    padding-top: 1.5rem;
   }
   #__next > div:nth-child(1) {
     height: 4.5rem;
@@ -635,6 +645,39 @@ a {
   }
   .category-heading {
     font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .category-preview ul li:nth-child(1) .category-preview-details > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .category-preview ul li:nth-child(1) .category-preview-details > div > div {
+    margin-top: .35rem;
+  }
+  .category-preview ul li:nth-child(1) .category-preview-details > div .picture-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: visible;
+    margin: .25rem 0;
+    border: none;
+  }
+  .category-preview ul li:nth-child(1) .category-preview-details > div .picture-container img {
+    border: 4px solid #828282;
+  }
+  .category-preview ul li:nth-child(1) .category-preview-details > div .picture-container img:hover {
+    -webkit-transform: none;
+            transform: none;
   }
 }
 /*# sourceMappingURL=index.css.map */

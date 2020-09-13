@@ -33,7 +33,7 @@ function CategoryPreview({ category: { title, articles } }) {
 							<div style={{ display: 'flex' }}>
 								<span
 									className="category-preview-img picture-container"
-									style={{ marginRight: '.25rem' }}>
+									style={{ marginRight: '.65rem' }}>
 									<picture>
 										<source
 											srcSet={!faultyPicsumIDs.includes(article.id % 1000)
@@ -57,15 +57,14 @@ function CategoryPreview({ category: { title, articles } }) {
 									style={{
 										display: 'flex',
 										flexDirection: 'column',
-										marginLeft: '.4rem',
 										fontSize: '.9rem',
 									}}>
 									<span>
 									{formatSentence(lipsum.slice(article.id % 800, article.id % 800 + article.description.length))}
 									</span>
-									<Link href={`/articles/${article.id}`}>
+									{article.description.length ? <Link href={`/articles/${article.id}`}>
 										<a className="read-more">read more</a>
-									</Link>
+									</Link> : null}
 								</div>
 							</div>
 						</div>

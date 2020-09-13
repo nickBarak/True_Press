@@ -5,7 +5,7 @@ import { convertToPath, convertFromPath } from '../../../Functions';
 
 export async function getStaticPaths() {
 	let categories = await queryDB(
-			"SELECT title, subcategories FROM categories WHERE title <> 'Labyrinth' AND title <> 'Headlines'"
+			"SELECT title, subcategories FROM categories WHERE title <> 'Headlines' AND title <> 'Education' AND title <> 'Politics'"
 		),
 		/* Generates path for all subcategories of all categories */
 		paths = categories.reduce(

@@ -34,21 +34,15 @@ function Header() {
 					</span>
 					<div>NO BIAS | NO FLUFF | REAL REPORTING</div>
 					<span>
-						<Link href="https://facebook.com/dailynexus">
-							<a target="_blank" rel="noreferrer noopener">
-								<i className="fab fa-facebook-square"></i>
-							</a>
-						</Link>
-						<Link href="https://twitter.com/dailynexus">
-							<a target="_blank" rel="noreferrer noopener">
-								<i className="fab fa-twitter"></i>
-							</a>
-						</Link>
-						<Link href="https://instagram.com/dailynexus">
-							<a target="_blank" rel="noreferrer noopener">
-								<i className="fab fa-instagram"></i>
-							</a>
-						</Link>
+						<a href="#">
+							<i className="fab fa-facebook-square"></i>
+						</a>
+						<a href="#">
+							<i className="fab fa-twitter"></i>
+						</a>
+						<a href="#">
+							<i className="fab fa-instagram"></i>
+						</a>
 					</span>
 				</div>
 				<Nav />
