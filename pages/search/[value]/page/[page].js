@@ -31,7 +31,7 @@ function Search() {
 				fetch(client + '/api/fetch-articles', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify({ ids: ssSearchResults.slice((Number(router.query.page) - 1) * 15, Number(router.query.page) * 15) })
+					body: JSON.stringify({ ids: ssSearchResults.slice((Number(router.query.page) - 1) * 10, Number(router.query.page) * 10) })
 				})
 					.then(res => res.json())
 					.then(rows => {
@@ -50,7 +50,7 @@ function Search() {
 							highestPage: Math.ceil(
 								sessionStorage.getItem(
 									's__EA__Rc_H_' + router.query.value.toLowerCase()
-								).length / 15
+								).length / 10
 							),
 							route: '/search/' + router.query.value,
 						});
@@ -75,12 +75,12 @@ function Search() {
 							),
 						];
 						setResultCount(rows.length);
-						setSearchResults(rowsByRelevanceAndDate.map(rows => rows.slice((Number(router.query.page) - 1) * 15, Number(router.query.page) * 15)));
+						setSearchResults(rowsByRelevanceAndDate.map(rows => rows.slice((Number(router.query.page) - 1) * 10, Number(router.query.page) * 10)));
 						setLoadingSearchResults(false);
 						setQueryTime(((Date.now() - now) / 1000).toFixed(2));
 						setFooterData({
 							page: Number(router.query.page),
-							highestPage: rows ? Math.ceil(rows.length / 15) : 1,
+							highestPage: rows ? Math.ceil(rows.length / 10) : 1,
 							route: '/search/' + router.query.value,
 						});
 						sessionStorage.setItem(

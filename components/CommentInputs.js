@@ -187,6 +187,7 @@ function CommentInputs({
 					style={{ position: 'relative' }}
 					className="input-large-container">
 					<img
+						className="main-comment-input-large-img"
 						src="https://secure.gravatar.com/avatar/?s=40&d=mm&r=g"
 						alt="user"
 					/>
@@ -270,8 +271,8 @@ function CommentInputs({
 
 				<style jsx>{`
 					.post-comment-button {
-						background-color: #555;
-						color: white;
+						background-color: #222;
+						color: #ddd;
 						cursor: pointer;
 						border: none;
 						z-index: 2;
@@ -279,16 +280,22 @@ function CommentInputs({
 
 					.post-comment-button:hover,
 					.post-comment-button:focus {
-						background-color: #404040;
+						background-color: var(--theme-gold);
+						color: #222;
 					}
 
 					input {
+						background-color: #666;
 						padding: 1.7rem 0.75rem 1.7rem 5rem;
-						border: 1px solid #ddd;
-						color: #888;
+						border: 2px solid #828282;
+						color: white;
 						font-family: monospace;
 						margin-bottom: 0.6rem;
 						font-size: ${embedded ? '.9rem' : '1rem'};
+					}
+
+					input::placeholder {
+						color: #bbb;
 					}
 
 					.input-large-container input {
@@ -297,9 +304,9 @@ function CommentInputs({
 
 					.input-large-container img {
 						position: absolute;
-						top: 1rem;
 						left: 1rem;
 						box-shadow: 0 0 4px 2px #d8d8d8;
+						border: none;
 					}
 
 					.input-small {
@@ -314,7 +321,7 @@ function CommentInputs({
 					}
 
 					.input-icon {
-						color: #aaa;
+						color: #bbb;
 						position: absolute;
 						top: 0.65rem;
 						left: 0.5rem;

@@ -69,7 +69,7 @@ function Layout({ footerData, children }) {
 				{/* v Div won't show if class or id attached for unknown reason v */}
 				<div
 					style={{
-						backgroundColor: '#eee',
+						backgroundColor: '#fdfdfd',
 						color: 'black',
 						justifyContent: 'center',
 						alignItems: 'center',
@@ -95,6 +95,10 @@ function Layout({ footerData, children }) {
 			<style jsx>{`
 				* {
 					font-family: Lato, sans-serif;
+				}
+
+				.main {
+					position: relative;
 				}
 
 				.bottom-ad-button {

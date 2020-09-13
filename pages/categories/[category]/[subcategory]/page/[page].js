@@ -7,7 +7,7 @@ export async function getStaticPaths() {
 	let categories = await queryDB(
 			"SELECT title, subcategories FROM categories WHERE title <> 'Labyrinth' AND title <> 'Headlines'"
 		),
-		/* Generates path for all subcategories of all categories and as many pages as is needed for each subcategory (15 articles per page) */
+		/* Generates path for all subcategories of all categories and as many pages as is needed for each subcategory (10 articles per page) */
 		paths = categories
 			.reduce(
 				(acc, category) => [
@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 					...Object.entries(
 						category.subcategories
 					).map(([key, val]) =>
-						new Array(Math.ceil(val.length / 15))
+						new Array(Math.ceil(val.length / 10))
 							.fill(true)
 							.map((_, i) => ({
 								params: {
@@ -44,8 +44,8 @@ export async function getStaticProps({
 		),
 		articles = await queryDB(
 			`SELECT * FROM articles WHERE id = ANY($1) ORDER BY publish_date DESC OFFSET ${
-				(Number(page) - 1) * 15
-			} ROWS FETCH NEXT 15 ROWS ONLY`,
+				(Number(page) - 1) * 10
+			} ROWS FETCH NEXT 10 ROWS ONLY`,
 			[subcategories.subcategories[convertFromPath(subcategory)]]
 		);
 
@@ -60,7 +60,7 @@ export async function getStaticProps({
 					highestPage: Math.ceil(
 						subcategories.subcategories[
 							convertFromPath(subcategory)
-						].length / 15
+						].length / 10
 					),
 				},
 			})
@@ -69,7 +69,7 @@ export async function getStaticProps({
 }
 
 /* Very similar to /categories/[category]/[subcategory] and /authors/[id] routes */
-/* Shows previews for all articles in a subcategory by most recent (15 per page) */
+/* Shows previews for all articles in a subcategory by most recent (10 per page) */
 function Subcategory({ heading, articles, footerData }) {
 	return (
 		<Layout footerData={footerData}>

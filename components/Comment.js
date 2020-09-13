@@ -260,6 +260,7 @@ function Comment({
 					object-fit: fill;
 					box-shadow: 0 0 2px 2px #d8d8d8;
 					margin-bottom: 0.5rem;
+					border: none;
 				}
 
 				i {
@@ -273,7 +274,7 @@ function Comment({
 
 				.comment > div {
 					${parent
-						? 'background-color: #f3f3f3; margin-bottom: .75rem;'
+						? 'background-color: #202020; margin-bottom: .75rem;'
 						: ''}
 					padding: .75rem;
 					font-size: 0.85rem;
@@ -292,6 +293,7 @@ function Comment({
 
 				button {
 					margin-left: 0.75rem;
+					background-color: #444;
 					color: var(--link-hover);
 					border: 1px solid var(--link-hover);
 					padding: 0.3rem 0.55rem;
@@ -306,7 +308,7 @@ function Comment({
 
 				button:hover,
 				button:hover i {
-					color: white;
+					color: #333;
 					background-color: var(--link-hover);
 				}
 

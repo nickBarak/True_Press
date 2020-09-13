@@ -12,7 +12,7 @@ function StaffContact() {
                         <p>Phone: (XXX) XXX-XXXX</p>
                     </div>
                     <div className="contact-number-group">
-                        <p><strong>Advertising office: </strong></p>
+                        <p><strong>Advertising Office: </strong></p>
                         <p>Phone: (XXX) XXX-XXXX</p>
                         <p>Fax: (XXX) XXX-XXXX</p>
                     </div>
@@ -24,7 +24,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                        <img className="staff-picture" alt="Profile picture of Harper Lambert" src="/img/nexus-logo.png"/>
+                        <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                         <div className="staff-name">Harper Adams</div>
@@ -39,7 +39,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Evelyn Spence" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Evelyn Brown</div>
@@ -54,7 +54,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Max Abrams" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Max Copperman</div>
@@ -69,7 +69,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Sofia Mejias-Pascoe" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Sofia Denascus</div>
@@ -84,7 +84,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Arturo Martinez Rivera" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Arturo Eltino-Fonte</div>
@@ -99,7 +99,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Katherine Swartz" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Katherine Greene</div>
@@ -114,7 +114,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Holly Rusch" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Holly Hamilton</div>
@@ -129,7 +129,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Hayley Tice" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Hayley Irving</div>
@@ -144,7 +144,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Melanie Ziment" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Melanie Jorgenson</div>
@@ -159,7 +159,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Emily Kocis" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Emily Kasig</div>
@@ -174,7 +174,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Brandon Victor" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Brandon Lang</div>
@@ -189,7 +189,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Annika Pearson" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Annika Miffleton</div>
@@ -204,7 +204,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Sunidhi Sridhar" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Sunidhi Numpati</div>
@@ -219,7 +219,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Winnie Lam" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Winnie Oshiya</div>
@@ -234,7 +234,7 @@ function StaffContact() {
         
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Paige Holloway" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Paige Pearce</div>
@@ -249,7 +249,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Sean Crommelin" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Sean Quick</div>
@@ -264,7 +264,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Emma Demorest" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Emma Remmington</div>
@@ -279,7 +279,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Max Myszkowski" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Max Sorialis</div>
@@ -294,7 +294,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of J. Matteo Wharton" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">J. Tomas Urdwick</div>
@@ -309,7 +309,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Sicheng Wang" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Sicheng Ving</div>
@@ -324,7 +324,7 @@ function StaffContact() {
                 
                 <div className="staff-member staff-member-small-picture">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Leonard Paulasa" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Leonard Wilkenson</div>
@@ -339,7 +339,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Ana Chavez" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Ana Xochil</div>
@@ -354,7 +354,7 @@ function StaffContact() {
                 
                 <div className="staff-member staff-member-small-picture">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Harvest Keeney" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Harvest Yoitz</div>
@@ -369,7 +369,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Hannah Appel" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Hannah Zimmer</div>
@@ -384,7 +384,7 @@ function StaffContact() {
                 
                 <div className="staff-member staff-member-small-picture">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Daniela Gomez" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Daniela Anderson</div>
@@ -399,7 +399,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Emily Liu" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Emily Ban</div>
@@ -414,7 +414,7 @@ function StaffContact() {
                 
                 <div className="staff-member staff-member-small-picture">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Rowan Tran" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Rowan Chui</div>
@@ -429,7 +429,7 @@ function StaffContact() {
         
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Joshen Mantai" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Joshen Deenrali</div>
@@ -444,7 +444,7 @@ function StaffContact() {
                 
                 <div className="staff-member staff-member-small-picture">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Ida Kazerani" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Ida Ecker</div>
@@ -459,7 +459,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Jordan Chang" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Jordan Fung</div>
@@ -474,7 +474,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Laila Voss" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Laila George</div>
@@ -489,7 +489,7 @@ function StaffContact() {
                 
                 <div className="staff-member">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Caroline Gee" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Caroline Hamilton</div>
@@ -504,7 +504,7 @@ function StaffContact() {
                 
                 <div className="staff-member staff-member-small-picture">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Natalie Gomez" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Natalie Inker</div>
@@ -519,7 +519,7 @@ function StaffContact() {
                 
                 <div className="staff-member staff-member-small-picture">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Gigi Jackson" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Gigi Jones</div>
@@ -534,7 +534,7 @@ function StaffContact() {
                 
                 <div className="staff-member staff-member-small-picture">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Laura Tucker" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Laura Kappe</div>
@@ -549,7 +549,7 @@ function StaffContact() {
                 
                 <div className="staff-member staff-member-small-picture">
                     <div className="staff-picture-container">
-                    <img className="staff-picture" alt="Profile picture of Daniel Ong" src="/img/nexus-logo.png"/>
+                    <img className="staff-picture" alt="staff portrait" src="/img/true-press-logo-1.png"/>
                     </div>
                     <div className="staff-info-container">
                     <div className="staff-name">Daniel Lamb</div>
@@ -602,6 +602,8 @@ function StaffContact() {
 
                 img {
                     max-width: 100%;
+                    border: none;
+                    border-radius: 7px;
                 }
 
                 .staff-info-container {
@@ -618,7 +620,7 @@ function StaffContact() {
                     color: #666;
                 }
                 
-                .staff-email {
+                .staff-email a {
                     font-size: .85rem;
                     word-break: break-word;
                     color: var(--link-hover);

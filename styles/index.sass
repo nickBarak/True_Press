@@ -20,10 +20,15 @@ html
     width: 100% !important
     background-color: #2f2f2f
 
-    img
-        border: 4px solid #828282
-        margin-top: .5rem
-        margin-bottom: .5rem
+    .main-comment-input-large-img
+        top: 1rem
+
+.picture-container
+    overflow: hidden
+    border: 4px solid #828282
+.picture-container-5px
+    overflow: hidden
+    border: 4px solid #828282
 
 .sidebar-container
     background-color: #eeccdd
@@ -57,21 +62,28 @@ a
 .header .logo
     transform: translateY(1rem)
 
-.headlines img
-    object-fit: scale-up
-    object-position: bottom left
-    height: 65%
-    max-width: 100%
-    align-self: flex-start
-    justify-self: flex-start
-    cursor: pointer
+.headlines, .headlines-mobile
+    .article-preview-title
+        color: $link-hover
+    img
+        object-fit: scale-up
+        object-position: bottom left
+        height: 65%
+        max-width: 100%
+        align-self: flex-start
+        justify-self: flex-start
+        cursor: pointer
+
+.headlines-mobile .article-preview-title:hover
+    color: $theme-gold
 
 .article-preview
     img
         height: 15rem
         width: 21.5rem
-    picture
-        align-self: center
+        object-fit: fill
+        transform: scaleY(1.02) translateY(1px)
+        
     .article-preview-title
         font-size: 1.75rem
     .labyrinth-title
@@ -228,9 +240,9 @@ a
 .donate-banner
     position: absolute
     bottom: 6rem
-    background-color: khaki
-    color: black
-    border: 3px solid black
+    background-color: $link-hover
+    color: #111
+    border: 3px solid #111
     font-weight: bold
     font-size: 2rem
     padding: 1.25rem .75rem 1.5rem .75rem
@@ -241,6 +253,7 @@ a
 
 .article 
   max-width: calc(100% - 2rem)
+  margin-top: 1.35rem
 
 
 .article-page-subcategory 
@@ -268,6 +281,9 @@ a
 .article-page-subcategory::after 
   bottom: -5px
 
+.article-page-details > div:nth-child(2),
+.article-page-author-name
+  color: darkgray
 
 .article-page-title 
   font-size: 2.5rem
@@ -275,13 +291,8 @@ a
   font-family: Times New Roman
   margin-bottom: 0.65rem
 
-
-.article-page-author-name 
-  color: black
-
-
 .article-page-author-name:hover 
-  color: var(--link-hover)
+  color: $link-hover
 
 
 .article-page-details 
@@ -293,7 +304,7 @@ a
   content: ''
   height: 1px
   width: 100%
-  background-color: $theme-blue
+  background-color: $link-hover
   /*#eee*/
   position: absolute
   bottom: -7.5%
@@ -301,7 +312,7 @@ a
 
 
 .article-page-details > div:nth-child(2),
-.article-page-author-name 
+.article-page-author-name
   font-family: Times New Roman
   font-size: 1.1rem
 
@@ -395,6 +406,9 @@ a
     .home-category-previews
         grid-template-columns: 1fr
 
+        li
+            margin: 0 1.75rem
+
 
 @media screen and (max-width: 800px)
     // html
@@ -448,6 +462,18 @@ a
         bottom: 3.45rem
         font-size: 1.25rem
 
+    .picture-container, .picture-container-5px
+        border: none
+
+    .main-children
+        img
+            border: 4px solid #828282
+            margin-top: .5rem
+            margin-bottom: .5rem
+
+    .main-comment-input-large-img
+        top: .6rem !important
+
     
 // @media screen and (max-width: 650px)
 //     html
@@ -494,6 +520,12 @@ a
         display: flex
         align-items: center
         white-space: nowrap
+
+    .headlines-mobile
+        .article-preview-title
+            color: white
+        .article-preview-title:hover
+            color: $link-hover
 
     .about img,
     .article img
@@ -550,5 +582,7 @@ a
 
     .category-heading
         font-size: 1.75rem
+
+    
 
 // @media screen and (max-width: 360px)

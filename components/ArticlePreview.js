@@ -9,7 +9,7 @@ function ArticlePreview({ article, imageLeft, labyrinth }) {
 		<>
 			<div className="article-preview">
 				{imageLeft && (
-					<span style={{ overflow: 'hidden' }}>
+					<span className="picture-container-5px">
 						<picture>
 							<source srcSet={!faultyPicsumIDs.includes(article.id % 1000)
 									? `https://picsum.photos/id/${article.id % 1000}/200`
@@ -52,7 +52,7 @@ function ArticlePreview({ article, imageLeft, labyrinth }) {
 					</Link>
 				</div>
 				{!imageLeft && (
-					<span style={{ overflow: 'hidden' }}>
+					<span className="picture-container-5px">
 						<picture>
 							<source srcSet={!faultyPicsumIDs.includes(article.id % 1000)
 									? `https://picsum.photos/id/${article.id % 1000}/200`
@@ -71,19 +71,21 @@ function ArticlePreview({ article, imageLeft, labyrinth }) {
 			</div>
 
 			<div className="article-preview-mobile">
-				<picture>
-					<source srcSet={!faultyPicsumIDs.includes(article.id % 1000)
-									? `https://picsum.photos/id/${article.id % 1000}/200`
-									: `/img/nexus-logo.png`
-								} />
-					<source
-						srcSet="/img/nexus-logo.png"
-						type="image/png"
-					/>
-					<Link href={`/articles/${article.id}`}>
-						<img alt="thumbnail" style={{ maxWidth: '100%' }} />
-					</Link>
-				</picture>
+				<span className="picture-container">
+					<picture>
+						<source srcSet={!faultyPicsumIDs.includes(article.id % 1000)
+										? `https://picsum.photos/id/${article.id % 1000}/200`
+										: `/img/nexus-logo.png`
+									} />
+						<source
+							srcSet="/img/nexus-logo.png"
+							type="image/png"
+						/>
+						<Link href={`/articles/${article.id}`}>
+							<img alt="thumbnail" style={{ maxWidth: '100%' }} />
+						</Link>
+					</picture>
+				</span>
 				<div className="article-preview-words">
 					<div>
 						<Link href={`/articles/${article.id}`}>
@@ -114,7 +116,7 @@ function ArticlePreview({ article, imageLeft, labyrinth }) {
 			<style jsx>{`
 				.article-preview {
 					margin: 2.5rem 0;
-					padding: .75rem;
+					padding: .9rem;
 					justify-content: flex-end;
 					position: relative;
 					background: linear-gradient(${!imageLeft ? 'to right' : 'to left'}, #161616, #222);

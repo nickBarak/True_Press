@@ -42,7 +42,12 @@ function App({ categories, headlines }) {
 					</div>
 					<ul className="home-category-previews">
 						{categories.map((category, i) =>
-						<li key={uuid()} style={{ border: '2px solid #eee', borderTop: 'none' }}>
+						<li key={uuid()} style={{
+							[i % 2 ? 'margin-right' : 'margin-left']: '1.75rem',
+							border: '2px solid #eee',
+							borderTop: 'none',
+							background: 'linear-gradient(to right, #363636, #515151)'
+						}}>
 							<CategoryPreview category={category} />
 						</li>
 						)}

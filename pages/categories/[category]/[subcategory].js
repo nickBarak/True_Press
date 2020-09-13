@@ -32,7 +32,7 @@ export async function getStaticProps({ params: { category, subcategory } }) {
 			[convertFromPath(category)]
 		),
 		articles = await queryDB(
-			'SELECT * FROM articles WHERE id = ANY($1) ORDER BY publish_date DESC FETCH FIRST 15 ROWS ONLY',
+			'SELECT * FROM articles WHERE id = ANY($1) ORDER BY publish_date DESC FETCH FIRST 10 ROWS ONLY',
 			[subcategories.subcategories[convertFromPath(subcategory)]]
 		);
 
@@ -47,7 +47,7 @@ export async function getStaticProps({ params: { category, subcategory } }) {
 					highestPage: Math.ceil(
 						subcategories.subcategories[
 							convertFromPath(subcategory)
-						].length / 15
+						].length / 10
 					),
 				},
 			})
@@ -56,7 +56,7 @@ export async function getStaticProps({ params: { category, subcategory } }) {
 }
 
 /* Very similar to /categories/[category]/[subcategory] and /authors/[id] routes */
-/* Shows previews for all articles in a subcategory by most recent (15 per page) */
+/* Shows previews for all articles in a subcategory by most recent (10 per page) */
 function Subcategory({ heading, articles, footerData }) {
 	return (
 		<Layout footerData={footerData}>

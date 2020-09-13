@@ -6,10 +6,10 @@ function AboutTheAuthor({ author }) {
 	return (
 		<div className="about-the-author">
 			<picture>
-				<source srcSet={'/img/nexus-logo.png'} />
-				<source srcSet="/img/nexus-fallback.webp" type="image/webp" />
+				<source srcSet={'/img/true-press-logo-1.png'} />
+				<source srcSet="/img/true-press-logo.jpg" />
 				<Link href={'/authors/' + author.id}>
-					<img alt="author" />
+					<img style={{ borderRadius: '6px' }} alt="author" />
 				</Link>
 			</picture>
 			<div>
@@ -40,6 +40,7 @@ function AboutTheAuthor({ author }) {
 					object-fit: contain;
 					height: 6.5rem;
 					cursor: pointer;
+					border: none;
 				}
 
 				.about-the-author > div {

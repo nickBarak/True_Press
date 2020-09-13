@@ -32,8 +32,8 @@ function CategoryPreview({ category: { title, articles } }) {
 						<div className="category-preview-details">
 							<div style={{ display: 'flex' }}>
 								<span
-									className="category-preview-img"
-									style={{ overflow: 'hidden' }}>
+									className="category-preview-img picture-container"
+									style={{ marginRight: '.25rem' }}>
 									<picture>
 										<source
 											srcSet={!faultyPicsumIDs.includes(article.id % 1000)
@@ -77,8 +77,6 @@ function CategoryPreview({ category: { title, articles } }) {
 					display: flex;
 					flex-direction: column;
 					position: relative;
-					background-color: #505050;
-					background: linear-gradient(to right, #363636, #515151);
 				}
 
 

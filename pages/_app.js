@@ -12,11 +12,8 @@ function _App({ Component, pageProps }) {
             <link
                 href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
                 rel="stylesheet" />
-                {/* <link rel="icon" href="https://i1.wp.com/dailynexus.com/wp-content/uploads/2015/10/cropped-new-logo.png?fit=32%2C32&amp;ssl=1" sizes="32x32"></link> */}
-                {/* <link rel="icon" href="https://i1.wp.com/dailynexus.com/wp-content/uploads/2015/10/cropped-new-logo.png?fit=192%2C192&amp;ssl=1" sizes="192x192"></link> */}
-                {/* <link rel="apple-touch-icon" href="https://i1.wp.com/dailynexus.com/wp-content/uploads/2015/10/cropped-new-logo.png?fit=180%2C180&amp;ssl=1"></link> */}
-                <link rel="icon" href="/img/nexus-logo.png"></link>
-            <title>Mock Nexus</title>
+                <link rel="icon" href="/img/true-press-logo-1.png"></link>
+            <title>True Press</title>
         </Head>
         <Component {...pageProps} />
     </>) }

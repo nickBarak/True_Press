@@ -32,7 +32,7 @@ function Search() {
 				fetch(client + '/api/fetch-articles', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify({ ids: ssSearchResults.slice(0, 15) })
+					body: JSON.stringify({ ids: ssSearchResults.slice(0, 10) })
 				})
 					.then(res => res.json())
 					.then(rows => {
@@ -51,7 +51,7 @@ function Search() {
 							highestPage: Math.ceil(
 								sessionStorage.getItem(
 									's__EA__Rc_H_' + router.query.value.toLowerCase()
-								).length / 15
+								).length / 10
 							),
 							route: '/search/' + router.query.value,
 						});
@@ -77,11 +77,11 @@ function Search() {
 						];
 						setResultCount(rows.length);
 						setLoadingSearchResults(false);
-						setSearchResults(rowsByRelevanceAndDate.map(rows => rows.slice(0, 15)));
+						setSearchResults(rowsByRelevanceAndDate.map(rows => rows.slice(0, 10)));
 						setQueryTime(((Date.now() - now) / 1000).toFixed(2));
 						setFooterData({
 							page: 1,
-							highestPage: rows ? Math.ceil(rows.length / 15) : 1,
+							highestPage: rows ? Math.ceil(rows.length / 10) : 1,
 							route: '/search/' + router.query.value,
 						});
 						sessionStorage.setItem(

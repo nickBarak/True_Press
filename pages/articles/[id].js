@@ -32,7 +32,7 @@ function Article({ article, author, related }) {
 					: !/[\. ,]/.exec(lipsum[lipsumCount.current+1])
 						? lipsum.slice(lipsumCount.current+1, lipsumCount.current += node.textContent.trim().length+1)
 						: lipsum.slice(lipsumCount.current+2, lipsumCount.current += node.textContent.trim().length+2);
-			}
+			} else if (node.textContent.trim() === 'Share this:' && node.parentElement) node.parentElement.style.marginTop = '.75rem';
 		}
 		lipsumify(contentDiv);
 		
@@ -41,9 +41,10 @@ function Article({ article, author, related }) {
 			...contentDiv.getElementsByTagName('span'),
 		].forEach(p => {
 			p.style.margin = '1rem 0';
-			p.style.fontFamily = 'Times New Roman, Georgia';
+			p.style.fontFamily = 'Lato';
 			p.style.fontSize = '1.225rem';
 			p.style.lineHeight = '150%';
+			// p.style.textAlign = 'justify';
 		});
 
 		/* hide unwanted content */
@@ -58,7 +59,10 @@ function Article({ article, author, related }) {
 		/* Attempt to make any image collections look decent */
 		document.getElementsByClassName(
 			'single-post-content'
-		)[0].style.fontFamily = 'Times New Roman, Georgia';
+		)[0].style.fontFamily = 'Lato';
+		document.getElementsByClassName(
+			'single-post-content'
+		)[0].style.textAlign = 'justify';
 		[...document.getElementsByClassName('gallery-row')].forEach(gallery => {
 			gallery.style.display = 'grid';
 			gallery.style.gridTemplateColumns = 'repeat(3, 1fr)';
@@ -105,6 +109,7 @@ function Article({ article, author, related }) {
 				? `https://picsum.photos/id/${photoID}/200/300`
 				: `https://picsum.photos/200/300`;
 			img.style.objectFit = 'cover';
+			img.style.border = '5px solid #828282'
 		});
 		[
 			document.getElementsByClassName('article-page-content')[0],
@@ -114,7 +119,7 @@ function Article({ article, author, related }) {
 			...contentDiv.getElementsByTagName('img'),
 		].forEach(el => {
 			el.style.maxWidth = '100%';
-			if (el.tagName === 'a') el.children[0].style.color = 'white';
+			if (el.tagName === 'a') alert(el.tagName);
 		});
 		[...document.getElementsByClassName('share-icon')].forEach(icon => {
 			let [site] = [...icon.classList].filter(
@@ -174,7 +179,6 @@ function Article({ article, author, related }) {
 	return (
 		<>
 			<Layout>
-				<img></img>
 				<div className="article">
 					<div className="article-page-subcategory">
 						{article.subcategory}
@@ -231,9 +235,9 @@ function Article({ article, author, related }) {
 export async function getStaticPaths() {
 	/* Pre-rendering all pages would exceed maximum bundle size for Heroku */
 	let ids = await queryDB('SELECT id FROM articles ORDER BY publish_date'),
-		paths = ids.slice(0, 100).map(id => ({ params: { id: String(id.id) } }));
+		paths = ids.slice(0, ids.length).map(id => ({ params: { id: String(id.id) } }));
 
-	return { paths, fallback: true };
+	return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params: { id } }) {

@@ -26,13 +26,13 @@ function Advertising() {
 					{formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `reaches UCSB’s 22,218 students — plus more than 6,000
 					full-time faculty and staff. Our competitive advertising
 					rates make the`.length))}{' '}
-					<span style={{ fontStyle: 'italic' }}>Nexus</span> {formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `your best
+					<span style={{ fontStyle: 'italic' }}>True Press</span> {formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `your best
 					value to reach the Central Coast’s most desirable consumer
 					audience`.length))}.
 					<br />
 					<br />
 					{formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `Did you know that a 2008 survey of`.length))}{' '}
-					<span style={{ fontStyle: 'italic' }}>Nexus</span> {formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `readers
+					<span style={{ fontStyle: 'italic' }}>True Press</span> {formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `readers
 					shows that 60 percent of undergraduates have personal
 					expense incomes of at least $300 a month — and UCSB students
 					spend their disposable funds in ways that will benefit your
@@ -100,12 +100,12 @@ function Advertising() {
 								textDecoration: 'underline',
 								fontSize: '1.05rem',
 							}}>
-							LOCAL RATE:
+							LINEATI RONI:
 						</div>
 						<div>
-							$13.65 per column inch — Available to advertisers
+							$XX.XX pin lores — Arialos ito tellitorusien
 							<br />
-							with a business located in Santa Barbara County.
+							wasiti belliden ito locali menmar.
 						</div>
 					</li>
 					<li>
@@ -115,12 +115,12 @@ function Advertising() {
 								textDecoration: 'underline',
 								fontSize: '1.05rem',
 							}}>
-							CAMPUS RATE:
+							COPUTI RONI:
 						</div>
 						<div>
-							$12.60 per column inch — Available to UCSB
+							$XX.XX pin lores — Arialos ito menmar
 							<br />
-							departments, clubs, organizations and individuals.
+							derialis, coolifus, oniferusien ato illiparti.
 						</div>
 					</li>
 					<li>
@@ -130,18 +130,18 @@ function Advertising() {
 								textDecoration: 'underline',
 								fontSize: '1.05rem',
 							}}>
-							NATIONAL AND AGENCY RATE RATE:
+							NOTERI UN TELLIBEN RONI:
 						</div>
 						<div>
-							$14.45 per column inch —
+							$XX.XX pin lores —
 							<br />
-							Available to all national
+							Arialos ito ausi origus,
 							<br />
-							(non-local) advertisers.
+							nun iferus tellitorusien.
 							<br />
-							$24.70 per column inch — Available to all agency
+							$XX.XX pin lores — Arialos ito ausi eneral
 							<br />
-							advertisers.
+							telitorusien.
 						</div>
 					</li>
 					<li>
@@ -151,12 +151,12 @@ function Advertising() {
 								textDecoration: 'underline',
 								fontSize: '1.05rem',
 							}}>
-							CAMPUS RATE:
+							MALIFUS RONI:
 						</div>
 						<div>
-							$12.60 per column inch — Available to UCSB
+							$XX.XX pin lores — Arialos ito menmar
 							<br />
-							departments, clubs, organizations and individuals.
+							derialis, coolifus, ato oniferusien.
 						</div>
 					</li>
 					<li>
@@ -166,9 +166,9 @@ function Advertising() {
 								textDecoration: 'underline',
 								fontSize: '1.05rem',
 							}}>
-							NONPROFIT RATE:
+							VALIOSI RONI:
 						</div>
-						<div>$12.70 per column inch.</div>
+						<div>$XX.XX pin lores</div>
 					</li>
 					<li>
 						<div
@@ -177,12 +177,12 @@ function Advertising() {
 								textDecoration: 'underline',
 								fontSize: '1.05rem',
 							}}>
-							COLOR PRICES:
+							SESTI DU PIOR:
 						</div>
 						<div>
-							Spot Color — $110 per color
+							Tu Sesti — $XXX pin lores
 							<br />
-							Full-Process Color — $440
+							Foreli Non Sesti — $XXX
 						</div>
 					</li>
 				</ul>

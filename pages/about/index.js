@@ -34,13 +34,13 @@ function AboutPage() {
 					democracy`.length))}.”
 					<br />
 					<br />
-					Vor <span style={{ fontStyle: 'italic' }}>Nexus</span>{' '}
+					Vor <span style={{ fontStyle: 'italic' }}>True Press</span>{' '}
 					{formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `continues to be the go-to source to stay up-to-date on all
 					things involving UCSB’s campus and Isla Vista. We offer
 					positions for writers, photographers, artists and any
 					creative souls interested in immersing themselves in culture
 					and information. The`.length))}{' '}
-					<span style={{ fontStyle: 'italic' }}>Nexus</span> {formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `provides
+					<span style={{ fontStyle: 'italic' }}>True Press</span> {formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `provides
 					a fast-paced environment for aspiring journalists, as well
 					as learning opportunities for students who want to explore
 					the stories that define our community`.length))}.
@@ -53,7 +53,7 @@ function AboutPage() {
 					best college newspapers by the Princeton Review two out of
 					the last three years and has received four California
 					Collegiate Media Awards in 2018 alone. The`.length))}{' '}
-					<span style={{ fontStyle: 'italic' }}>Nexus</span> {formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `also
+					<span style={{ fontStyle: 'italic' }}>True Press</span> {formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `also
 					received seven awards at the California Collegiate Media
 					Awards in 2019`.length))}.
 				</div>

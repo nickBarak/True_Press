@@ -59,7 +59,7 @@ function Related({ articles }) {
 				}
 
 				li > div {
-					color: gray;
+					color: darkgray;
 					font-family: Georgia, serif;
 					margin-bottom: 0 0.15rem;
 					font-size: 0.9rem;

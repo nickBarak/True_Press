@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params: { id } }) {
 	let [author] = await queryDB('SELECT * FROM authors WHERE id = $1', [id]),
 		articles = await queryDB(
-			'SELECT * FROM articles WHERE author = $1 ORDER BY publish_date DESC FETCH FIRST 15 ROWS ONLY',
+			'SELECT * FROM articles WHERE author = $1 ORDER BY publish_date DESC FETCH FIRST 10 ROWS ONLY',
 			[JSON.stringify({ id: Number(id), name: author.name })]
 		);
 
@@ -23,7 +23,7 @@ export async function getStaticProps({ params: { id } }) {
 				articles,
 				footerData: {
 					page: 1,
-					highestPage: Math.ceil(author.articles.length / 15),
+					highestPage: Math.ceil(author.articles.length / 10),
 					route: '/authors/' + id,
 				},
 			})

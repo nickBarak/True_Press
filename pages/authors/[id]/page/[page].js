@@ -7,7 +7,7 @@ export async function getStaticPaths() {
 		paths = authors.reduce(
 			(acc, { id, articles }) => [
 				...acc,
-				...new Array(Math.ceil(articles.length / 15))
+				...new Array(Math.ceil(articles.length / 10))
 					.fill(true)
 					.map((_, i) => ({
 						params: { id: String(id), page: String(i + 1) },
@@ -23,8 +23,8 @@ export async function getStaticProps({ params: { id, page } }) {
 	let [author] = await queryDB('SELECT * FROM authors WHERE id = $1', [id]),
 		articles = await queryDB(
 			`SELECT * FROM articles WHERE author = $1 ORDER BY publish_date DESC OFFSET ${
-				(Number(page) - 1) * 15
-			} ROWS FETCH NEXT 15 ROWS ONLY`,
+				(Number(page) - 1) * 10
+			} ROWS FETCH NEXT 10 ROWS ONLY`,
 			[JSON.stringify({ id: Number(id), name: author.name })]
 		);
 
@@ -35,7 +35,7 @@ export async function getStaticProps({ params: { id, page } }) {
 				articles,
 				footerData: {
 					page: Number(page),
-					highestPage: Math.ceil(author.articles.length / 15),
+					highestPage: Math.ceil(author.articles.length / 10),
 					route: '/authors/' + id,
 				},
 			})

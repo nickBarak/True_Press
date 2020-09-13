@@ -13,6 +13,7 @@ function Headlines({ articles }) {
 					<li key={uuid()} style={{ width: '50%' }}>
 						<Link href={`/articles/${articles[0].id}`}>
 							<img
+								style={{ border: '5px solid #828282', marginBottom: '2px' }}
 								src={!faultyPicsumIDs.includes(articles[0].id % 1000)
 									? `https://picsum.photos/id/${articles[0].id % 1000}/450/300`
 									: `/img/nexus-logo.png`
@@ -70,6 +71,12 @@ function Headlines({ articles }) {
 											</a>
 										</Link>
 									</div>
+									<div className="article-preview-description">
+										{lipsum.slice(article.id % 800, article.id % 800 + article.description.length)}
+									</div>
+									<Link href={`/articles/${articles[0].id}`}>
+										<a className="read-more">read more</a>
+									</Link>
 								</li>
 							))}
 						</ul>
@@ -87,7 +94,7 @@ function Headlines({ articles }) {
 									: `/img/nexus-logo.png`
 								}
 								alt="headline"
-								style={{ width: '99%', marginBottom: '.5rem' }}
+								style={{ width: '99%', marginBottom: '.5rem', border: '4px solid #828282' }}
 							/>
 						</Link>
 						<Link href={`/articles/${articles[0].id}`}>
@@ -185,12 +192,11 @@ function Headlines({ articles }) {
 				}
 
 				.article-preview-title {
-					color: var(--link-hover);
 					font-weight: bold;
 					font-size: 1.275rem;
 				}
 
-				.article-preview-title:hover {
+				.headlines .article-preview-title:hover {
 					color: var(--theme-gold);
 				}
 
@@ -223,6 +229,10 @@ function Headlines({ articles }) {
 					display: flex;
 					flex-direction: column;
 					justify-content: flex-start;
+				}
+
+				.read-more {
+					color: gray;
 				}
 			`}</style>
 		</>

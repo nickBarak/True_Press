@@ -24,7 +24,7 @@ function MobileNav({ scrollY }) {
 								e.target.parentElement.parentElement.style.transform =
 									'translateX(-100vw)';
 							}}>
-							The Mock Nexus
+							True Press News
 						</a>
 					</Link>
 					<span
@@ -225,14 +225,14 @@ function MobileNav({ scrollY }) {
 
 			<style jsx>{`
 				.nav-mobile {
-					background-color: #444;
+					background-color: #212121;
 					color: white;
 					display: flex;
 					flex-direction: column;
 					position: absolute;
 					top: 0;
-					left: 0;
-					right: 1.75rem;
+					left: .5rem;
+					right: .5rem;
 					transform: translateX(-120%);
 					transition: transform 210ms ease-out;
 					z-index: 20;
@@ -281,10 +281,6 @@ function MobileNav({ scrollY }) {
 
 				.nav-mobile > ul > li > div {
 					display: flex;
-				}
-
-				li {
-					background-color: #444;
 				}
 
 				a {

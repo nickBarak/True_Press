@@ -21,7 +21,7 @@ export async function getStaticProps({ params: { category } }) {
 			convertFromPath(category),
 		]),
 		articles = await queryDB(
-			'SELECT * FROM articles WHERE id = ANY($1) ORDER BY publish_date DESC FETCH FIRST 15 ROWS ONLY',
+			'SELECT * FROM articles WHERE id = ANY($1) ORDER BY publish_date DESC FETCH FIRST 10 ROWS ONLY',
 			[articleIDs.articles]
 		);
 
@@ -33,7 +33,7 @@ export async function getStaticProps({ params: { category } }) {
 				footerData: {
 					route: '/categories/' + category,
 					page: 1,
-					highestPage: Math.ceil(articleIDs.articles.length / 15),
+					highestPage: Math.ceil(articleIDs.articles.length / 10),
 				},
 			})
 		),
@@ -41,7 +41,7 @@ export async function getStaticProps({ params: { category } }) {
 }
 
 /* Very similar to /categories/[category]/[subcategory] and /authors/[id] routes */
-/* Shows previews for all articles in a category by most recent (15 per page) */
+/* Shows previews for all articles in a category by most recent (10 per page) */
 function Category({ heading, articles, footerData }) {
 	return (
 		<Layout footerData={footerData}>

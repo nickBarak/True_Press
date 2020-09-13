@@ -637,7 +637,7 @@ function Nav() {
 				}
 
 				.search-results img {
-					border: 1px solid #e2e2e2;
+					border: 2px solid #828282;
 					width: 65px;
 					height: 65px;
 					object-fit: fill;

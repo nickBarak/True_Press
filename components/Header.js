@@ -33,7 +33,7 @@ function Header() {
 							day: 'numeric',
 						})}
 					</span>
-					<div>NO AGENDA. NO FLUFF. REAL REPORTING.</div>
+					<div>NO BIAS | NO FLUFF | REAL REPORTING</div>
 					<span>
 						<Link href="https://facebook.com/dailynexus">
 							<a target="_blank" rel="noreferrer noopener">
@@ -61,7 +61,7 @@ function Header() {
 							County, on UCSB Operations`.length)}
 						</span>
 						<span className="banner-read-more">
-							click to read more
+							Click to read more
 						</span>
 					</a>
 				</Link>
@@ -121,6 +121,13 @@ function Header() {
 
 				.full-logo {
 					text-align: center;
+					margin-bottom: .5rem;
+					transform: translateY(-.6rem);
+				}
+
+				.full-logo img {
+					transform: translateY(1.4rem);
+					border-radius: 6px;
 				}
 
 				.full-logo a {
@@ -182,9 +189,9 @@ function Header() {
 				}
 
 				.header-mobile {
-					width: calc(100% + 2rem);
-					transform: translateX(-1rem);
-					border-bottom: 3px solid black;
+					width: calc(100% + 1rem);
+					transform: translateX(-.5rem);
+					border-bottom: 2px solid black;
 					justify-content: space-around;
 					align-items: center;
 					position: sticky;
@@ -200,6 +207,7 @@ function Header() {
 					text-align: left;
 					display: flex;
 					align-items: flex-start;
+					transform: translateY(0);
 				}
 
 				.header-mobile .full-logo a {
@@ -212,9 +220,10 @@ function Header() {
 				}
 
 				.header-mobile .logo {
-					width: 2.5rem;
+					object-fit: fill;
+					width: 3rem;
 					height: 3rem;
-					transform: translateY(-.3rem);
+					transform: translateY(-.15rem);
 				}
 
 				.hamburger-nav {

@@ -11,7 +11,7 @@ function Donate() {
 	return (
 		<Layout>
 			<About heading="Donate">
-				<Link href="https://giving.ucsb.edu/Funds/Give?id=67">
+				<Link href="#">
 					<a
 						style={{
 							cursor: 'pointer',
@@ -30,7 +30,7 @@ function Donate() {
 				</Link>
 				<div>
 					<br />
-					The <span style={{ fontStyle: 'italic' }}>True Press</span>
+					<span style={{ fontStyle: 'italic' }}>True Press</span>
 					, {formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `the historic and direct descendant of UCSB student news
 					enterprises dating back nearly 100 years needs donations of
 					any size in order to keep publishing, in print and on the
@@ -38,7 +38,7 @@ function Donate() {
 					<br />
 					<br />
 					{formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `Like every other college newspaper, the`.length))}{' '}
-					<span style={{ fontStyle: 'italic' }}>Nexus</span> is
+					<span style={{ fontStyle: 'italic' }}>True Press</span> is
 					{formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `fighting to survive in the new media era. UCSB student
 					journalists, who spend countless hours digging out stories
 					about the inner workings of the University and the
@@ -57,7 +57,7 @@ function Donate() {
 					natural disasters that plagued the area in recent years`.length))}.
 					<br />
 					<br />
-					<span style={{ fontStyle: 'italic' }}>Nexus</span>{' '}
+					<span style={{ fontStyle: 'italic' }}>True Press</span>{' '}
 					{formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `journalists receive no core funding from the University. Nor
 					do they have the luxury of an academic journalism department
 					to support their efforts. Its staff needs money for student
@@ -89,7 +89,7 @@ function Donate() {
 					<br />
 					<br />
 					{formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `Please give to keep the`.length))}{' '}
-					<span style={{ fontStyle: 'italic' }}>Nexus</span> alive,
+					<span style={{ fontStyle: 'italic' }}>True Press</span> alive,
 					{formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `and always independent`.length))}.
 				</div>
 				<article>
@@ -123,7 +123,7 @@ function Donate() {
 						<div>HISTORY</div>
 						<div>
 							{formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `Since the 1930s, the`.length))}{' '}
-							<span style={{ fontStyle: 'italic' }}>Nexus</span> –
+							<span style={{ fontStyle: 'italic' }}>True Press</span> –
 							{formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `under various other names – has been keeping tabs on
 							UC Santa Barbara and the surrounding communities,
 							breaking several noteworthy stories such as the 1986
@@ -139,14 +139,14 @@ function Donate() {
 							editorial board in the wake of the 1970 Bank of
 							America burning in Isla Vista, attributed from
 							Robert Maynard Hutchins’ quote: “A free press is the
-							nexus of any democracy.”`.length))}
+							True Press of any democracy.”`.length))}
 						</div>
 					</section>
 					<section key="2">
 						<div>SERVICES</div>
 						<div>
 							The{' '}
-							<span style={{ fontStyle: 'italic' }}>Nexus</span>{' '}
+							<span style={{ fontStyle: 'italic' }}>True Press</span>{' '}
 							{formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `provides timely, relevant and essential editorial
 							and feature coverage to students as well as readers
 							throughout the UCSB community and Santa Barbara
@@ -169,7 +169,7 @@ function Donate() {
 							Editors’ Statement of Principles`.length))}.
 						</div>
 						<br />
-						<Link href="https://giving.ucsb.edu/Funds/Give?id=67">
+						<Link href="#">
 							<a
 								style={{
 									color: 'var(--link-hover)',
@@ -190,13 +190,13 @@ function Donate() {
 								Website:{' '}
 								<Link href="/">
 									<a style={{ color: 'var(--link-hover)' }}>
-										www.truepress.com
+										www.truepress.online
 									</a>
 								</Link>
 							</li>
 							<li key="0">
 								Facebook:{' '}
-								<Link href="https://www.facebook.com/truepress">
+								<Link href="#">
 									<a style={{ color: 'var(--link-hover)' }}>
 										https://www.facebook.com/truepress
 									</a>
@@ -204,7 +204,7 @@ function Donate() {
 							</li>
 							<li key="0">
 								Twitter:{' '}
-								<Link href="https://www.twitter.com/truepress">
+								<Link href="#">
 									<a style={{ color: 'var(--link-hover)' }}>
 										https://www.twitter.com/truepress
 									</a>
@@ -212,7 +212,7 @@ function Donate() {
 							</li>
 							<li key="0">
 								Instagram:{' '}
-								<Link href="https://www.instagram.com/truepress">
+								<Link href="#">
 									<a style={{ color: 'var(--link-hover)' }}>
 										https://www.instagram.com/truepress
 									</a>

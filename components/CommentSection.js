@@ -41,7 +41,7 @@ function CommentSection({
 								borderStyle: 'solid',
 								borderWidth: '8px 0 1px 12px',
 								borderColor:
-									'#666666 transparent transparent transparent',
+									'#212121 transparent transparent transparent',
 								position: 'absolute',
 								right: 0,
 								bottom: '-8px',
@@ -160,7 +160,7 @@ function CommentSection({
 					</ul>
 					<span className="comment-authors">
 						<i className="fas fa-user-circle"></i>
-						<span style={{ color: '#666' }}>
+						<span style={{ color: '#999' }}>
 							{(_ => {
 								let checked = [];
 								let count = level => {
@@ -213,7 +213,7 @@ function CommentSection({
 				}
 
 				.comment-section > div:nth-child(1) > span:nth-child(1) {
-					background-color: #666;
+					background-color: #212121;
 					padding: 0.325rem 1rem;
 					font-size: 1rem;
 					color: white;
@@ -242,7 +242,7 @@ function CommentSection({
 
 				.icons li {
 					margin: 0 0.75rem;
-					color: #666;
+					color: #ddd;
 					font-size: 1.05rem;
 				}
 
@@ -299,7 +299,7 @@ function CommentSection({
 				}
 
 				.fa-user-circle {
-					color: #999;
+					color: #aaa;
 					font-size: 1.75rem;
 					margin-right: 0.6rem;
 				}
@@ -331,16 +331,16 @@ function CommentSection({
 
 				.comments {
 					position: relative;
-					margin-top: 3rem;
+					margin-top: 4.25rem;
 				}
 
 				.comments::before {
-					background-color: #f7f7f7;
+					background-color: var(--theme-gold);
 					height: 1.25rem;
 					width: 100%;
 					content: '';
 					position: absolute;
-					top: -2rem;
+					top: -3rem;
 				}
 
 				.comments li {

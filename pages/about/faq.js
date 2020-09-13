@@ -340,7 +340,7 @@ function FAQ() {
 							helpful contact information or press releases. All
 							articles are written by`.length))}{' '}
 							<span style={{ fontStyle: 'italic' }}>
-								Nexus
+								True Press
 							</span>{' '}
 							{formatSentence(lipsum.slice(lipsumCount.current, lipsumCount.current += `staffers. We do not accept freelance work unless it
 							is for the opinion page, which is welcome to all
