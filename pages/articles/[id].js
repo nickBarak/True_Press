@@ -235,9 +235,9 @@ function Article({ article, author, related }) {
 export async function getStaticPaths() {
 	/* Pre-rendering all pages would exceed maximum bundle size for Heroku */
 	let ids = await queryDB('SELECT id FROM articles ORDER BY publish_date'),
-		paths = ids.slice(0, ids.length).map(id => ({ params: { id: String(id.id) } }));
+		paths = ids.slice(500, ids.length).map(id => ({ params: { id: String(id.id) } }));
 
-	return { paths, fallback: false };
+	return { paths, fallback: true };
 }
 
 export async function getStaticProps({ params: { id } }) {
