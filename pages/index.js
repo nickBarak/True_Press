@@ -51,16 +51,17 @@ export async function getStaticProps() {
 			headlineIDs.articles,
 		]);
 
+	
 	let categories = [
-			'Artsweek',
-			'Multimedia',
-			'News',
-			'Nexustentialism',
-			'On the Menu',
-			'Opinion',
-			'Science & Tech',
-			'Sports',
-		],
+		'Arts',
+		'Life',
+		'Multimedia',
+		'Opinion',
+		'Politics',
+		'Science',
+		'Sports',
+		'World'
+	],
 		articles;
 	for (let i = 0; i < categories.length; i++) {
 		articles = await queryDB(
