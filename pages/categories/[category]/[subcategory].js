@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 				...Object.keys(category.subcategories).map((_, i) => ({
 					params: {
 						category: convertToPath(category.title),
-						subcategory: convertToPath(category.title+'-subcat-'+(i+1))
+						subcategory: convertToPath((category === 'Multimedia' ? 'media' : category.title)+'-subcat-'+(i+1))
 					},
 				})),
 			],
