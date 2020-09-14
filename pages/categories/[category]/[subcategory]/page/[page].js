@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 					...acc,
 					...Object.entries(
 						category.subcategories
-					).map(([_, val], i) =>
+					).slice(0, 12).map(([_, val], i) =>
 						new Array(Math.ceil(val.length / 10))
 							.fill(true)
 							.map((_, j) => ({

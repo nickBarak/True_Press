@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 		paths = categories.reduce(
 			(acc, category) => [
 				...acc,
-				...Object.keys(category.subcategories).map((_, i) => ({
+				...Object.keys(category.subcategories).slice(0, 12).map((_, i) => ({
 					params: {
 						category: convertToPath(category.title),
 						subcategory: convertToPath((category === 'Multimedia' ? 'media' : category.title)+'-subcat-'+(i+1))
