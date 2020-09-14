@@ -5,3 +5,5 @@ const modified = [{"title":"Arts","maxHeight":"11rem","subcategories":["Arts Sub
 export function convertSubcategory(category, subcategory) {
     return modified.find(({ title }) => title === category).subcategories.indexOf(subcategory);
 }
+
+export default modified
