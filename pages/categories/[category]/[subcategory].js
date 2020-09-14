@@ -26,6 +26,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { category, subcategory, trueSubcategory } }) {
+	console.log(category, trueSubcategory);
 	let [
 			subcategories,
 		] = await queryDB(
