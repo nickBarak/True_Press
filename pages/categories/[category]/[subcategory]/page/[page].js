@@ -14,13 +14,14 @@ export async function getStaticPaths() {
 					...acc,
 					...Object.entries(
 						category.subcategories
-					).map(([_, val], i) =>
+					).map(([key, val], i) =>
 						new Array(Math.ceil(val.length / 10))
 							.fill(true)
 							.map((_, n) => ({
 								params: {
 									category: convertToPath(category.title),
 									subcategory: convertToPath(category.title+'-subcat-'+(i+1)),
+									trueSubcategory: key,
 									page: String(n + 1),
 								},
 							}))
@@ -34,7 +35,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({
-	params: { category, subcategory, page },
+	params: { category, subcategory, trueSubcategory, page },
 }) {
 	let [
 			subcategories,
@@ -46,7 +47,7 @@ export async function getStaticProps({
 			`SELECT * FROM articles WHERE id = ANY($1) ORDER BY publish_date DESC OFFSET ${
 				(Number(page) - 1) * 10
 			} ROWS FETCH NEXT 10 ROWS ONLY`,
-			[subcategories.subcategories[convertFromPath(subcategory)]]
+			[subcategories.subcategories[trueSubcategory]]
 		);
 
 	return {
@@ -59,7 +60,7 @@ export async function getStaticProps({
 					route: '/categories/' + category + '/' + subcategory,
 					highestPage: Math.ceil(
 						subcategories.subcategories[
-							convertFromPath(subcategory)
+							trueSubcategory
 						].length / 10
 					),
 				},
