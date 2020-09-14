@@ -14,8 +14,8 @@ export async function getStaticPaths() {
 				...Object.keys(category.subcategories).map((subcategory, i) => ({
 					params: {
 						category: convertToPath(category.title),
-						subcategory: convertToPath(category.title+'-subcat-'+(i+1)),
-						trueSubcategory: subcategory
+						subcategory: convertToPath(subcategory),
+						displayName: convertToPath(category.title+'-subcat-'+(i+1))
 					},
 				})),
 			],
@@ -25,8 +25,7 @@ export async function getStaticPaths() {
 	return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params: { category, subcategory, trueSubcategory } }) {
-	console.log(category, trueSubcategory);
+export async function getStaticProps({ params: { category, subcategory, displayName } }) {
 	let [
 			subcategories,
 		] = await queryDB(
@@ -35,20 +34,20 @@ export async function getStaticProps({ params: { category, subcategory, trueSubc
 		),
 		articles = await queryDB(
 			'SELECT * FROM articles WHERE id = ANY($1) ORDER BY publish_date DESC FETCH FIRST 10 ROWS ONLY',
-			[subcategories.subcategories[trueSubcategory]]
+			[subcategories.subcategories[convertFromPath(subcategory)]]
 		);
 
 	return {
 		props: JSON.parse(
 			JSON.stringify({
-				heading: convertFromPath(subcategory),
+				heading: convertFromPath(displayName),
 				articles,
 				footerData: {
 					page: 1,
-					route: '/categories/' + category + '/' + subcategory,
+					route: '/categories/' + category + '/' + displayName,
 					highestPage: Math.ceil(
 						subcategories.subcategories[
-							trueSubcategory
+							convertFromPath(subcategory)
 						].length / 10
 					),
 				},

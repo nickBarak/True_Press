@@ -17,12 +17,12 @@ export async function getStaticPaths() {
 					).map(([key, val], i) =>
 						new Array(Math.ceil(val.length / 10))
 							.fill(true)
-							.map((_, n) => ({
+							.map((_, j) => ({
 								params: {
 									category: convertToPath(category.title),
-									subcategory: convertToPath(category.title+'-subcat-'+(i+1)),
-									trueSubcategory: key,
-									page: String(n + 1),
+									subcategory: convertToPath(key),
+									page: String(j + 1),
+									displayName: convertToPath(category.title+'-subcat-'+(i+1))
 								},
 							}))
 					),
@@ -35,7 +35,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({
-	params: { category, subcategory, trueSubcategory, page },
+	params: { category, subcategory, page, displayName },
 }) {
 	let [
 			subcategories,
@@ -47,20 +47,20 @@ export async function getStaticProps({
 			`SELECT * FROM articles WHERE id = ANY($1) ORDER BY publish_date DESC OFFSET ${
 				(Number(page) - 1) * 10
 			} ROWS FETCH NEXT 10 ROWS ONLY`,
-			[subcategories.subcategories[trueSubcategory]]
+			[subcategories.subcategories[convertFromPath(subcategory)]]
 		);
 
 	return {
 		props: JSON.parse(
 			JSON.stringify({
-				heading: convertFromPath(subcategory),
+				heading: convertFromPath(displayName),
 				articles,
 				footerData: {
 					page: Number(page),
-					route: '/categories/' + category + '/' + subcategory,
+					route: '/categories/' + category + '/' + displayName,
 					highestPage: Math.ceil(
 						subcategories.subcategories[
-							trueSubcategory
+							convertFromPath(subcategory)
 						].length / 10
 					),
 				},
