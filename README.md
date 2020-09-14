@@ -1,4 +1,4 @@
-# True_Press
+# True Press
 
 This newspaper site includes over 8000 articles from 1000 authors in 9 categories and 48 subcategories. The home page includes a navigation bar for each of the categories and subcategories as well as 6 about pages and a search tool, a headlines section, a sidebar of recent activity and previews of the most recent articles in every category. Each page of the application also includes a footer navigation bar with links to several about pages as well as the home page.
 
