@@ -2,6 +2,7 @@ import { queryDB } from '../../../../../db';
 import ArticleDisplay from '../../../../../components/ArticleDisplay';
 import Layout from '../../../../../layouts';
 import { convertToPath, convertFromPath } from '../../../../../Functions';
+import { convertSubcategory } from '../../../../../data/categories';
 
 export async function getStaticPaths() {
 	let categories = await queryDB(
@@ -14,15 +15,14 @@ export async function getStaticPaths() {
 					...acc,
 					...Object.entries(
 						category.subcategories
-					).map(([key, val], i) =>
+					).map(([_, val], i) =>
 						new Array(Math.ceil(val.length / 10))
 							.fill(true)
 							.map((_, j) => ({
 								params: {
 									category: convertToPath(category.title),
-									subcategory: convertToPath(key),
+									subcategory: convertToPath(category.title+'-subcat-'+(i+1)),
 									page: String(j + 1),
-									displayName: convertToPath(category.title+'-subcat-'+(i+1))
 								},
 							}))
 					),
@@ -35,8 +35,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({
-	params: { category, subcategory, page, displayName },
+	params: { category, subcategory, page },
 }) {
+	let trueSubcategory = convertSubcategory(convertFromPath(category), convertFromPath(subcategory));
 	let [
 			subcategories,
 		] = await queryDB(
@@ -47,20 +48,20 @@ export async function getStaticProps({
 			`SELECT * FROM articles WHERE id = ANY($1) ORDER BY publish_date DESC OFFSET ${
 				(Number(page) - 1) * 10
 			} ROWS FETCH NEXT 10 ROWS ONLY`,
-			[subcategories.subcategories[convertFromPath(subcategory)]]
+			[subcategories.subcategories[trueSubcategory]]
 		);
 
 	return {
 		props: JSON.parse(
 			JSON.stringify({
-				heading: convertFromPath(displayName),
+				heading: convertFromPath(subcategory),
 				articles,
 				footerData: {
 					page: Number(page),
-					route: '/categories/' + category + '/' + displayName,
+					route: '/categories/' + category + '/' + subcategory,
 					highestPage: Math.ceil(
 						subcategories.subcategories[
-							convertFromPath(subcategory)
+							trueSubcategory
 						].length / 10
 					),
 				},
