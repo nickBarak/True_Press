@@ -14,14 +14,14 @@ export async function getStaticPaths() {
 					...acc,
 					...Object.entries(
 						category.subcategories
-					).map(([key, val]) =>
+					).map(([_, val], i) =>
 						new Array(Math.ceil(val.length / 10))
 							.fill(true)
-							.map((_, i) => ({
+							.map((_, n) => ({
 								params: {
 									category: convertToPath(category.title),
-									subcategory: convertToPath(key),
-									page: String(i + 1),
+									subcategory: convertToPath(category.title+'-subcat-'+(i+1)),
+									page: String(n + 1),
 								},
 							}))
 					),

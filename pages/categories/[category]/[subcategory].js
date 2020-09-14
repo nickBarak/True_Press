@@ -11,10 +11,10 @@ export async function getStaticPaths() {
 		paths = categories.reduce(
 			(acc, category) => [
 				...acc,
-				...Object.keys(category.subcategories).map(subcategory => ({
+				...Object.keys(category.subcategories).map((_, i) => ({
 					params: {
 						category: convertToPath(category.title),
-						subcategory: convertToPath(subcategory),
+						subcategory: convertToPath(category.title+'-subcat-'+(i+1)),
 					},
 				})),
 			],
