@@ -1,5 +1,7 @@
 # True Press
 
+Live URL: https://www.truepress.online
+
 This newspaper site includes over 8000 articles from 1000 authors in 9 categories and 48 subcategories. The home page includes a navigation bar for each of the categories and subcategories as well as 6 about pages and a search tool, a headlines section, a sidebar of recent activity and previews of the most recent articles in every category. Each page of the application also includes a footer navigation bar with links to several about pages as well as the home page.
 
 Visiting a category or subcategory page will display the name of the category or subcategory and previews for all articles in that category or subcategory ordered by recency of publish date. 10 article previews are displayed on a page at a time and categories and subcategories with more than 10 articles will include a pagination tool at the bottom of the page. This pattern is also used for author pages. Clicking on an author's name anywhere in the application will take you to his or her page.
