@@ -4,7 +4,7 @@ import lipsum from '../data/lipsum';
 import faultyPicsumIDs from '../data/faultyPicsumIDs';
 
 /* Displays image on variable side */
-function ArticlePreview({ article, imageLeft, labyrinth }) {
+function ArticlePreview({ article, imageLeft }) {
 	return (
 		<>
 			<div className="article-preview">
@@ -29,9 +29,7 @@ function ArticlePreview({ article, imageLeft, labyrinth }) {
 					<div>
 						<Link href={`/articles/${article.id}`}>
 							<a
-								className={`article-preview-title${
-									labyrinth ? ' labyrinth-title' : ''
-								}`}>
+								className={`article-preview-title`}>
 								{formatSentence(lipsum.slice(article.id % 800, article.id % 800 + article.title.length))}
 							</a>
 						</Link>
@@ -90,9 +88,7 @@ function ArticlePreview({ article, imageLeft, labyrinth }) {
 					<div>
 						<Link href={`/articles/${article.id}`}>
 							<a
-								className={`article-preview-title${
-									labyrinth ? ' labyrinth-title' : ''
-								}`}>
+								className={`article-preview-title`}>
 								{formatSentence(lipsum.slice(article.id % 800, article.id % 800 + article.title.length))}
 							</a>
 						</Link>
@@ -112,7 +108,6 @@ function ArticlePreview({ article, imageLeft, labyrinth }) {
 				</div>
 			</div>
 
-			{/* Labyrinth has slightly different formatting (thinner and always with image to left) */}
 			<style jsx>{`
 				.article-preview {
 					margin: 2.5rem 0;
@@ -158,11 +153,11 @@ function ArticlePreview({ article, imageLeft, labyrinth }) {
 					display: flex;
 					flex-direction: column;
 					margin: 0 0.75rem;
-					width: ${labyrinth ? '100%' : '80%'};
+					width: 80%;
 				}
 
-				.article-prevew .artilce-preview-words {
-					${imageLeft ? '' : 'align-items: flex-end'};
+				.article-prevew .article-preview-words {
+					${imageLeft ? '' : 'align-items: flex-end; text-align: right;'};
 				}
 
 				.article-preview-title {
