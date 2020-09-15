@@ -154,9 +154,6 @@ function ArticlePreview({ article, imageLeft }) {
 					flex-direction: column;
 					margin: 0 0.75rem;
 					width: 80%;
-				}
-
-				.article-prevew .article-preview-words {
 					${!imageLeft ? '' : `
 					align-items: flex-end;
 					text-align: right;
