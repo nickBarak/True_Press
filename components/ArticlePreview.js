@@ -157,7 +157,10 @@ function ArticlePreview({ article, imageLeft }) {
 				}
 
 				.article-prevew .article-preview-words {
-					${imageLeft ? '' : 'align-items: flex-end; text-align: right;'};
+					${!imageLeft ? '' : `
+					align-items: flex-end;
+					text-align: right;
+					`}
 				}
 
 				.article-preview-title {
