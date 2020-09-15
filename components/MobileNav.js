@@ -200,7 +200,6 @@ function MobileNav({ scrollY }) {
 						<form
 							style={{ width: '70%' }}
 							onSubmit={e => {
-								e.preventDefault();
 								router.push(
 									'/search/' +
 										convertToPath(

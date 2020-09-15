@@ -13,10 +13,14 @@ html {
   font-family: Lato, sans-serif;
 }
 
+.header {
+  background-color: white;
+}
+
 .main-children {
   color: #eee !important;
   width: 100% !important;
-  background-color: #2f2f2f;
+  background-color: #383838;
 }
 
 .main-children .main-comment-input-large-img {

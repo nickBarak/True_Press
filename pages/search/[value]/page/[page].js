@@ -12,7 +12,7 @@ function Search() {
 	const [sortBy, setSortBy] = useState(0);
 	const [loadingSearchResults, setLoadingSearchResults] = useState(false);
 	const [queryTime, setQueryTime] = useState(0);
-	const [resultCount, setResultCount] = useState('Unknown');
+	const [resultCount, setResultCount] = useState(0);
 	const [searchError, setSearchError] = useState(null);
 	const [footerData, setFooterData] = useState({});
 	const mounted = useRef(false);
@@ -77,7 +77,7 @@ function Search() {
 						setResultCount(rows.length);
 						setSearchResults(rowsByRelevanceAndDate.map(rows => rows.slice((Number(router.query.page) - 1) * 10, Number(router.query.page) * 10)));
 						setLoadingSearchResults(false);
-						setQueryTime(((Date.now() - now) / 1000).toFixed(2));
+						setQueryTime(rows.length ? ((Date.now() - now) / 1000).toFixed(2) : 0);
 						setFooterData({
 							page: Number(router.query.page),
 							highestPage: rows ? Math.ceil(rows.length / 10) : 1,
@@ -93,6 +93,43 @@ function Search() {
 							console.log(e) ||
 							setSearchError('Error fetching results')
 					);
+
+				/* Second call for lengthier queries */
+					fetch(
+						client +
+							'/api/search-extended?value=' +
+							router.query.value
+					)
+						.then(res => res.json())
+						.then(
+							rows => {
+								setResultCount(resultCount + rows.length);
+								setSearchResults([
+									[...rows, ...searchResults[0]],
+									[...searchResults[1], ...rows].sort(
+										(
+											{ publish_date: a },
+											{ publish_date: b }
+										) =>
+											new Date(b) -
+											new Date(a)
+									)
+								]);
+								setQueryTime(
+									( (Date.now() - now)/1000 ).toFixed(2)
+								);
+								setFooterData({
+									page: 1,
+									highestPage: rows ? Math.ceil((searchResults[0].length + rows.length) / 10) : 1,
+									route: '/search/' + router.query.value,
+								});
+								sessionStorage.setItem(
+									's__EA__Rc_H_' + router.query.value.toLowerCase(),
+									JSON.stringify([...rows, ...searchResults[0]].map(({ id }) => id))
+								);
+							}
+						)
+						.catch(e => console.log(e));
 			}
 		},
 		[mounted.current]

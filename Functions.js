@@ -44,6 +44,7 @@ export function copyToClipboard(text) {
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');
+    document.body.removeChild(el);
 }
 
 export function formatSentence(text) {

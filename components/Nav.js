@@ -91,7 +91,6 @@ function Nav() {
 									href={`/categories/${category.title
 										.toLowerCase()
 										.replace(/ /g, '-')}`}>
-									<>
 										<a
 											className="nav-link-full"
 											name={category.title}
@@ -99,12 +98,16 @@ function Nav() {
 											onMouseOut={hideSubcategories}>
 											{category.title}
 										</a>
+								</Link>
+								<Link
+									href={`/categories/${category.title
+										.toLowerCase()
+										.replace(/ /g, '-')}`}>
 										<a
 											className="nav-link-mobile"
 											name={category.title}>
 											{category.title}
 										</a>
-									</>
 								</Link>
 								<ul
 									className="nav-subcategories"
@@ -209,7 +212,7 @@ function Nav() {
 									)
 										.then(res => res.json())
 										.then(
-											rows =>
+											rows => {
 												/* First index for sorting by relevance, second index for sorting by date. Need separate values to avoid overwrite and only sort once */
 												setSearchResults([
 													rows,
@@ -221,16 +224,23 @@ function Nav() {
 															new Date(b) -
 															new Date(a)
 													),
-												]) ||
+												]);
 												setLoadingSearchResults(
 													false
-												) ||
+												);
 												setQueryTime(
-													(
+													rows.length
+													? (
 														(Date.now() - now) /
 														1000
 													).toFixed(2)
-												)
+													: 0
+												);
+												sessionStorage.setItem(
+													's__EA__Rc_H_' + router.query.value.toLowerCase(),
+													JSON.stringify(rows.map(({ id }) => id))
+												);
+											}
 										)
 										.catch(
 											e =>
@@ -248,9 +258,9 @@ function Nav() {
 									)
 										.then(res => res.json())
 										.then(
-											rows =>
+											rows => {
 												setSearchResults([
-													[...searchResults[0], ...rows],
+													[...rows, ...searchResults[0]],
 													[...searchResults[1], ...rows].sort(
 														(
 															{ publish_date: a },
@@ -259,8 +269,17 @@ function Nav() {
 															new Date(b) -
 															new Date(a)
 													)
-												])
-										);
+												]);
+												setQueryTime(
+													( (Date.now() - now)/1000 ).toFixed(2)
+												);
+												sessionStorage.setItem(
+													's__EA__Rc_H_' + router.query.value.toLowerCase(),
+													JSON.stringify([...rows, ...searchResults[0]].map(({ id }) => id))
+												);
+											}
+										)
+										.catch(e => console.log(e));
 
 									/* Lower background opacity, raise modal opacity, prevent scrolling background while allowing scrolling of modal. Bottom ad remains visible (if it was) */
 									let {
@@ -322,11 +341,13 @@ function Nav() {
 						{/* Show loading, query time or error */}
 						{!searchError ? (
 							!loadingSearchResults ? (
-								`${searchResults[0].length} result${
-									searchResults[0].length === 1 ? '' : 's'
-								} (${queryTime} second${
+								`${queryTime
+									? `${searchResults[0].length} result${
+									searchResults[0].length === 1 ? '' : 's'}`
+									: 'Nothing so far'
+								} (${queryTime ? `${queryTime} second${
 									queryTime === 1 ? '' : 's'
-								})`
+								}` : 'waiting for more responses...'})`
 							) : (
 								'Loading articles...'
 							)

@@ -28,11 +28,13 @@ function ArticleDisplay({ type, heading, articles, searchData }) {
 							{/* Show loading, query time or error */}
 							{!searchData.searchError ? (
 								!searchData.loadingSearchResults ? (
-									`${searchData.resultCount} result${
-										searchData.resultCount === 1 ? '' : 's'
-									} (${searchData.queryTime} second${
+									`${searchData.queryTime
+										? `${searchData.resultCount} result${
+										searchData.resultCount === 1 ? '' : 's'}`
+										: 'Nothing so far'
+									} (${searchData.queryTime ? `${searchData.queryTime} second${
 										searchData.queryTime === 1 ? '' : 's'
-									})`
+									}` : 'waiting for more responses...'})`
 								) : (
 									'Loading articles...'
 								)
