@@ -271,8 +271,8 @@ function CommentInputs({
 
 				<style jsx>{`
 					.post-comment-button {
-						background-color: #222;
-						color: #ddd;
+						background-color: ${parent ? 'var(--link-hover)' : '#222'};
+						color: #eee;
 						cursor: pointer;
 						border: none;
 						z-index: 2;
@@ -281,7 +281,7 @@ function CommentInputs({
 					.post-comment-button:hover,
 					.post-comment-button:focus {
 						background-color: var(--theme-gold);
-						color: #222;
+						color: ${parent ? '#fff' : '#222'};
 					}
 
 					input {
