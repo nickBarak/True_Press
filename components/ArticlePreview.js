@@ -84,7 +84,7 @@ function ArticlePreview({ article, imageLeft }) {
 						</Link>
 					</picture>
 				</span>
-				<div className="article-preview-words">
+				<div className="article-preview-words" style={{ textAlign: 'left', alignItems: 'flex-start' }}>
 					<div>
 						<Link href={`/articles/${article.id}`}>
 							<a
