@@ -14,7 +14,7 @@ function Related({ articles }) {
 					{articles.map((article, i) => (
 						<li key={uuid()}>
 							<Link href={`/articles/${article.id}`}>
-								<a>{formatSentence(lipsum.slice(article.id % 800, article.id % 800 + article.title.length))}</a>
+								<a onclick="setTimeout(() => window.location.reload(), 250);">{formatSentence(lipsum.slice(article.id % 800, article.id % 800 + article.title.length))}</a>
 							</Link>
 							<div>{convertDate(article.publish_date)}</div>
 							<div>In "{article.category}"</div>
